@@ -1,0 +1,35 @@
+{
+  "name": "jasmine-ts",
+  "version": "0.0.1",
+  "description": "Execute jasmine with ts-node",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "prepublish": "typings i && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svi3c/jasmine-ts.git"
+  },
+  "keywords": [
+    "node",
+    "testing",
+    "tests",
+    "jasmine",
+    "typescript"
+  ],
+  "author": "Sven Reglitzki <sreglitzki@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svi3c/jasmine-ts/issues"
+  },
+  "homepage": "https://github.com/svi3c/jasmine-ts#readme",
+  "dependencies": {
+    "jasmine": "^2.4.1",
+    "ts-node": "^0.7.2",
+    "typescript": "^1.8.10"
+  },
+  "devDependencies": {
+    "typings": "^0.8.1"
+  }
+}

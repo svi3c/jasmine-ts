@@ -1,0 +1,8 @@
+typings
+.idea
+src
+spec
+.travis.yml
+.editorconfig
+tsconfig.json
+.npmignore
