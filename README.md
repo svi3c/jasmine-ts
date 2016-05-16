@@ -26,6 +26,25 @@ npm i -D jasmine-ts
   node_modules/.bin/jasmine-ts init
   ```
 
+  Note: This module enables the configuration support of
+  reporters. For example, if you want to use the
+  [jasmine-spec-reporter](https://github.com/bcaudan/jasmine-spec-reporter),
+  you can add a reporters array to the `jasmine.json`
+  file like this:
+
+  ```json
+  {
+    "reporters": [
+      {
+        "name": "jasmine-spec-reporter",
+        "options": {
+          "displayStacktrace": "all"
+        }
+      }
+    ]
+  }
+  ```
+
 * Run the tests
 
   ```

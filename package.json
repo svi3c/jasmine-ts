@@ -1,11 +1,11 @@
 {
   "name": "jasmine-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Execute jasmine with ts-node",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "prepublish": "typings i && tsc"
+    "test": "node index.js -- spec/jasmine-ts.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "typescript": "^1.8.10"
   },
   "devDependencies": {
-    "typings": "^0.8.1"
+    "typings": "^0.8.1",
+    "jasmine-spec-reporter": "^2.4.0"
   }
 }

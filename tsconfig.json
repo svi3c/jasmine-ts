@@ -1,13 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "removeComments": true,
-    "moduleResolution": "node",
-    "sourceMap": true
-  },
   "files": [
-    "typings/main.d.ts",
-    "index.ts"
+    "typings/main.d.ts"
   ]
 }
