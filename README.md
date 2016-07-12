@@ -58,5 +58,5 @@ npm i -D jasmine-ts
 You still need to install the typings for jasmine to make the typescript-compiler happy about your specs:
 
 ```
-typings i -D --ambient jasmine
+typings i -DG dt~jasmine
 ```
