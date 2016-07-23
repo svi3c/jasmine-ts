@@ -26,11 +26,11 @@
   "homepage": "https://github.com/svi3c/jasmine-ts#readme",
   "dependencies": {
     "jasmine": "^2.4.1",
-    "ts-node": "^0.7.2",
-    "typescript": "^1.8.10"
+    "ts-node": "^1.2.1",
+    "typescript": "^2.0.0"
   },
   "devDependencies": {
-    "typings": "^0.8.1",
-    "jasmine-spec-reporter": "^2.4.0"
+    "typings": "^1.3.2",
+    "jasmine-spec-reporter": "^2.5.0"
   }
 }

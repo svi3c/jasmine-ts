@@ -1,8 +1,7 @@
 {
   "name": "jasmine-ts",
-  "version": false,
   "dependencies": {},
-  "ambientDevDependencies": {
-    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446"
+  "globalDevDependencies": {
+    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255"
   }
 }
