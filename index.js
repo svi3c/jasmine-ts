@@ -13,9 +13,14 @@ var initReporters = () => {
   var configPath = process.env.JASMINE_CONFIG_PATH || "spec/support/jasmine.json";
   var config = JSON.parse(fs.readFileSync(path.resolve(configPath)));
   if(config.reporters && config.reporters.length > 0) {
-    config.reporters.forEach(reporter =>
-      jasmine.addReporter(new (require(reporter.name))(reporter.options))
-    );
+    config.reporters.forEach(reporter => {
+      var parts = reporter.name.split('#');
+      var name = parts[0];
+      var member = parts[1];
+      var reporterClass = member ? require(name)[member] : require(name); 
+       
+      jasmine.addReporter(new (reporterClass)(reporter.options))
+    });
   }
 };
 
