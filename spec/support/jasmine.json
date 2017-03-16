@@ -10,7 +10,7 @@
   "random": false,
   "reporters": [
     {
-      "name": "jasmine-spec-reporter",
+      "name": "jasmine-spec-reporter#SpecReporter",
       "options": {
         "displayStacktrace": "all"
       }
