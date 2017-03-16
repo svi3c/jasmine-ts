@@ -38,7 +38,7 @@ npm i -D jasmine-ts
   {
     "reporters": [
       {
-        "name": "jasmine-spec-reporter",
+        "name": "jasmine-spec-reporter#SpecReporter",
         "options": {
           "displayStacktrace": "all"
         }
@@ -46,6 +46,8 @@ npm i -D jasmine-ts
     ]
   }
   ```
+  If the reporters are not the default export of the module,
+  you can reference another export by using the `#` separator.
 
 * Run the tests
 
