@@ -1,6 +1,6 @@
 {
   "name": "jasmine-ts",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Execute jasmine with ts-node",
   "main": "lib/index.js",
   "bin": "lib/index.js",
