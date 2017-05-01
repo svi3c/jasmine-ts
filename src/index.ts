@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 import * as fs from "fs";
-import * as Jasmine from "jasmine";
-import * as Command from "jasmine/lib/command";
 import * as path from "path";
 import "ts-node/register";
+
+const Jasmine = require("jasmine");
+const Command = require("jasmine/lib/command");
 
 const jasmine = new Jasmine({ projectBaseDir: path.resolve() });
 const examplesDir = path.join("node_modules", "jasmine-core", "lib", "jasmine-core", "example", "node_example");

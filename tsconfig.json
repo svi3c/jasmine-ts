@@ -6,8 +6,7 @@
         "sourceMap": true,
         "outDir": "lib"
     },
-    "include": [
-      "src/*.d.ts",
+    "files": [
       "src/index.ts"
     ]
 }
