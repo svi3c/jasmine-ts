@@ -2,8 +2,9 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es5",
-        "noImplicitAny": true,
+        "strict": true,
         "sourceMap": true,
+        "inlineSources": true,
         "outDir": "lib"
     },
     "files": [

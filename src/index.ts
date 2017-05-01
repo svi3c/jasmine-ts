@@ -23,7 +23,7 @@ const initReporters = (config: any) => {
   }
 };
 
-let configJSON: string;
+let configJSON: string = "";
 try {
   configJSON = fs.readFileSync(path.resolve(configPath), "utf8");
 } catch (e) { }

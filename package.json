@@ -28,7 +28,7 @@
   "dependencies": {
     "jasmine": "^2.5.3",
     "ts-node": "^2.1.0",
-    "typescript": "^2.2.1"
+    "typescript": "^2.3.2"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.46",
