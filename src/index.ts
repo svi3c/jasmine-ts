@@ -13,6 +13,7 @@ const configPath = process.env.JASMINE_CONFIG_PATH || "spec/support/jasmine.json
 
 const initReporters = (config: any) => {
   if (config.reporters && config.reporters.length > 0) {
+    jasmine.env.clearReporters();
     config.reporters.forEach((reporter: {name: string, options: any}) => {
       const parts = reporter.name.split("#");
       const name = parts[0];
