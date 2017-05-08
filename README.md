@@ -18,7 +18,7 @@ npm i -D jasmine-ts
   ```json
   {
     "scripts": {
-      "test": "jasmine-ts 'path/to/specs/**/*.spec.ts'"
+      "test": "jasmine-ts \"path/to/specs/**/*.spec.ts\""
     }
   }
   ```
@@ -31,7 +31,7 @@ npm i -D jasmine-ts
   Note: This module enables the configuration support of
   reporters. For example, if you want to use the
   [jasmine-spec-reporter](https://github.com/bcaudan/jasmine-spec-reporter),
-  you can add a reporters array to the `jasmine.json`
+  which provides a nice output, you can add a reporters array to the `jasmine.json`
   file like this:
 
   ```json
