@@ -68,3 +68,5 @@ TypeScript 1:
 ```
 typings i -DG dt~jasmine
 ```
+
+Since `0.1.3` [ts-node options](https://www.npmjs.com/package/ts-node#configuration-options) are passed through to ts-node.

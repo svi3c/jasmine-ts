@@ -1,7 +1,26 @@
 #!/usr/bin/env node
 import * as fs from "fs";
 import * as path from "path";
-import "ts-node/register";
+import { register } from "ts-node/dist";
+import { argv } from "yargs";
+
+const TS_NODE_OPTIONS = [
+  "fast",
+  "lazy",
+  "cache",
+  "cacheDirectory",
+  "compiler",
+  "project",
+  "ignore",
+  "ignoreWarnings",
+  "disableWarnings",
+  "getFile",
+  "fileExists",
+  "compilerOptions",
+];
+
+const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => argv[option] && {[option]: argv[option]}));
+register(tsNodeOptions);
 
 const Jasmine = require("jasmine");
 const Command = require("jasmine/lib/command");
@@ -29,7 +48,7 @@ try {
   configJSON = fs.readFileSync(path.resolve(configPath), "utf8");
 } catch (e) { }
 
-if(configJSON) {
+if (configJSON) {
   const config = JSON.parse(configJSON);
   initReporters(config);
 }
