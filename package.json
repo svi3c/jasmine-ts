@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "scripts": {
-    "test": "tslint index.ts && tsc && node lib/index.js spec/jasmine-ts.spec.ts",
+    "test": "tslint index.ts && tsc && node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts",
     "prepublishOnly": "tsc"
   },
   "repository": {

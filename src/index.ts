@@ -28,7 +28,7 @@ const Command = require("jasmine/lib/command");
 const jasmine = new Jasmine({ projectBaseDir: path.resolve() });
 const examplesDir = path.join("node_modules", "jasmine-core", "lib", "jasmine-core", "example", "node_example");
 const command = new Command(path.resolve(), examplesDir, console.log);
-const configPath = process.env.JASMINE_CONFIG_PATH || "spec/support/jasmine.json";
+const configPath = argv.config || process.env.JASMINE_CONFIG_PATH || "spec/support/jasmine.json";
 
 const initReporters = (config: any) => {
   if (config.reporters && config.reporters.length > 0) {
