@@ -54,6 +54,19 @@ npm i -D jasmine-ts
   ```
   npm test
   ```
+  
+### Running with istanbul coverage
+
+You can use [nyc](https://github.com/istanbuljs/nyc) to check your test coverage.
+
+Example `package.json`:
+```json
+{
+  "scripts": {
+    "test": "nyc  -r lcov -e .ts -x \"*.spec.ts\" jasmine-ts \"path/to/specs/**/*.spec.ts\""
+  }
+}
+```
 
 ### Note
 
