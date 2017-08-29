@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import * as fs from "fs";
 import * as path from "path";
-import { register } from "ts-node/dist";
+import { register, parse } from "ts-node/dist";
 import { argv } from "yargs";
 
 const TS_NODE_OPTIONS = [
@@ -19,7 +19,14 @@ const TS_NODE_OPTIONS = [
   "compilerOptions",
 ];
 
-const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => argv[option] && {[option]: argv[option]}));
+const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => {
+  if (argv[option]) {
+    return (option === "compilerOptions")
+      ? {compilerOptions: parse(argv[option])}
+      : {[option]: argv[option]}
+  }
+}));
+
 register(tsNodeOptions);
 
 const Jasmine = require("jasmine");
