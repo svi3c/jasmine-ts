@@ -2,6 +2,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { register } from "ts-node/dist";
+import * as tsConfigPaths from "tsconfig-paths";
 import { argv } from "yargs";
 
 const TS_NODE_OPTIONS = [
@@ -21,6 +22,11 @@ const TS_NODE_OPTIONS = [
 
 const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => argv[option] && {[option]: argv[option]}));
 register(tsNodeOptions);
+
+const tsConfig = tsConfigPaths.loadConfig();
+if (tsConfig.resultType === "success") {
+  tsConfigPaths.register(tsConfig);
+}
 
 const Jasmine = require("jasmine");
 const Command = require("jasmine/lib/command");
