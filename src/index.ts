@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import * as fs from "fs";
 import * as path from "path";
-import { register, parse } from "ts-node/dist";
+import { parse, register } from "ts-node/dist";
 import * as tsConfigPaths from "tsconfig-paths";
 import { argv } from "yargs";
 
@@ -24,7 +24,7 @@ const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => {
   if (argv[option]) {
     return (option === "compilerOptions")
       ? {compilerOptions: parse(argv[option])}
-      : {[option]: argv[option]}
+      : {[option]: argv[option]};
   }
 }));
 
@@ -66,4 +66,6 @@ if (configJSON) {
   initReporters(config);
 }
 
-command.run(jasmine, process.argv.slice(2));
+const commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath) >= 0);
+
+command.run(jasmine, commandOptions);
