@@ -60,6 +60,6 @@ if (configJSON) {
   initReporters(config);
 }
 
-const commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath) >= 0);
+const commandOptions = process.argv.slice(2);
 
 command.run(jasmine, commandOptions);
