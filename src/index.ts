@@ -17,6 +17,8 @@ const TS_NODE_OPTIONS = [
   "getFile",
   "fileExists",
   "compilerOptions",
+  "transpileOnly",
+  "typeCheck",
 ];
 
 const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => {
