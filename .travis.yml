@@ -3,3 +3,9 @@ node_js:
   - "9"
   - "10"
   - "11"
+install:
+  - npm install
+before_script:
+  - npm install
+script:
+  - npm run-script test
