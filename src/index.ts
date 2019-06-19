@@ -24,7 +24,7 @@ const TS_NODE_OPTIONS = [
 const tsNodeOptions = Object.assign({}, ...TS_NODE_OPTIONS.map((option) => {
   if (argv[option]) {
     return (option === "compilerOptions")
-      ? {compilerOptions: parse(argv[option])}
+      ? {compilerOptions: parse(argv[option] as string)}
       : {[option]: argv[option]};
   }
 }));
@@ -54,7 +54,7 @@ const initReporters = (config: any) => {
 
 let configJSON: string = "";
 try {
-  configJSON = fs.readFileSync(path.resolve(configPath), "utf8");
+  configJSON = fs.readFileSync(path.resolve(configPath as string), "utf8");
 } catch (e) { }
 
 if (configJSON) {
@@ -62,6 +62,6 @@ if (configJSON) {
   initReporters(config);
 }
 
-const commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath) >= 0);
+const commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath as string) >= 0);
 
 command.run(jasmine, commandOptions);

@@ -1,6 +1,7 @@
 {
     "extends": "tslint:recommended",
     "rules": {
+      "no-console": [true, "warning"],
       "member-access": false,
       "max-classes-per-file": [ false ],
       "switch-default": false,
