@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/tslint index.ts && tsc && node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts --compilerOptions='{\"allowJs\": true}'",
+    "lint": "./node_modules/.bin/tslint -p tsconfig.json",
+    "test": "npm run lint && tsc && node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts --compilerOptions='{\"allowJs\": true}'",
     "prepublishOnly": "tsc"
   },
   "repository": {
