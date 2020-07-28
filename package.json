@@ -1,6 +1,6 @@
 {
   "name": "jasmine-ts",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Execute jasmine with ts-node",
   "main": "lib/index.js",
   "bin": "lib/index.js",
@@ -8,7 +8,7 @@
     "precompile": "rimraf lib",
     "compile": "tsc --project tsconfig.json",
     "lint": "./node_modules/.bin/tslint -p tsconfig.json",
-    "jasmineTs": "node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts --transpileOnly --compilerOptions='{\"allowJs\": true}'",
+    "jasmineTs": "node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts --transpileOnly --allowJs=true}",
     "test": "npm run lint && npm run compile && npm run jasmineTs",
     "prepublishOnly": "tsc"
   },
