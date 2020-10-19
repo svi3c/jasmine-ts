@@ -72,7 +72,7 @@ Example `package.json`:
 
 You still need to install the typings for jasmine to make the typescript-compiler happy about your specs:
 
-TypeScript 2:
+TypeScript >= 2:
 ```
 npm i -D @types/jasmine
 ```

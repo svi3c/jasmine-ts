@@ -1,6 +1,6 @@
 {
   "name": "jasmine-ts",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Execute jasmine with ts-node",
   "main": "lib/index.js",
   "bin": "lib/index.js",
@@ -34,7 +34,7 @@
   },
   "peerDependencies": {
     "jasmine": ">=3.4",
-    "ts-node": ">=3.2.0 <=8",
+    "ts-node": ">=3.2.0 <9",
     "typescript": ">=3.5.2"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "jasmine": ">=3.4",
     "jasmine-spec-reporter": "^4.2.1",
     "rimraf": "^2.6.3",
-    "ts-node": ">=3.2.0 <=8",
+    "ts-node": ">=3.2.0 <9",
     "tslint": "^5.17.0",
     "typescript": ">=3.5.2"
   },
