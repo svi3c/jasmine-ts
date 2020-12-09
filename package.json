@@ -32,6 +32,9 @@
     "url": "https://github.com/ert78gb/jasmine-ts/issues"
   },
   "homepage": "https://github.com/ert78gb/jasmine-ts#readme",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "yargs": "^16.2.0"
   },

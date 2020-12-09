@@ -1,8 +1,0 @@
-typings
-.idea
-src
-spec
-.github
-.editorconfig
-tsconfig.json
-.npmignore
