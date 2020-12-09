@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import * as fs from "fs";
 import * as path from "path";
-import { parse, register } from "ts-node/dist";
+import { parse, register } from "ts-node";
 import { argv } from "yargs";
 
 const TS_NODE_OPTIONS = [
