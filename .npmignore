@@ -2,7 +2,7 @@ typings
 .idea
 src
 spec
-.travis.yml
+.github
 .editorconfig
 tsconfig.json
 .npmignore
