@@ -1,5 +1,5 @@
 {
-  "name": "jasmine-ts",
+  "name": "@ert78gb/jasmine-ts",
   "version": "0.3.0",
   "description": "Execute jasmine with ts-node",
   "main": "lib/index.js",
@@ -24,11 +24,14 @@
     "typescript"
   ],
   "author": "Sven Reglitzki <sreglitzki@gmail.com>",
+  "maintainers": [
+    "Róbert Kiss <ert78gb@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/svi3c/jasmine-ts/issues"
+    "url": "https://github.com/ert78gb/jasmine-ts/issues"
   },
-  "homepage": "https://github.com/svi3c/jasmine-ts#readme",
+  "homepage": "https://github.com/ert78gb/jasmine-ts#readme",
   "dependencies": {
     "yargs": "^16.2.0"
   },
