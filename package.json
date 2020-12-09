@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/svi3c/jasmine-ts#readme",
   "dependencies": {
-    "yargs": "^13.2.4"
+    "yargs": "^16.2.0"
   },
   "peerDependencies": {
     "jasmine": ">=3.4",
