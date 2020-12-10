@@ -1,6 +1,6 @@
 {
   "name": "@ert78gb/jasmine-ts",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Execute jasmine with ts-node",
   "main": "lib/index.js",
   "bin": "lib/index.js",
