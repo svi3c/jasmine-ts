@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import * as fs from "fs";
 import * as path from "path";
 import { parse, register } from "ts-node";
 import { argv } from "yargs";
@@ -34,34 +33,29 @@ register(tsNodeOptions);
 const Jasmine = require("jasmine");
 const Command = require("jasmine/lib/command");
 
-const jasmine = new Jasmine({ projectBaseDir: path.resolve() });
+const jasmine = new Jasmine({projectBaseDir: path.resolve()});
 const examplesDir = path.join("node_modules", "jasmine-core", "lib", "jasmine-core", "example", "node_example");
 const command = new Command(path.resolve(), examplesDir, console.log);
-const configPath = argv.config || process.env.JASMINE_CONFIG_PATH || "spec/support/jasmine.json";
 
-const initReporters = (config: any) => {
-  if (config.reporters && config.reporters.length > 0) {
-    jasmine.env.clearReporters();
-    config.reporters.forEach((reporter: {name: string, options: any}) => {
-      const parts = reporter.name.split("#");
-      const name = parts[0];
-      const member = parts[1];
-      const reporterClass = member ? require(name)[member] : require(name);
-      jasmine.addReporter(new (reporterClass)(reporter.options));
-    });
-  }
-};
+const JASMINE_OPTIONS = [
+  '--no-color',
+  '--color',
+  '--filter=',
+  '--helper=',
+  '--require=',
+  '--stop-on-failure=',
+  '--fail-fast=',
+  '--config=',
+  '--reporter='
+]
 
-let configJSON: string = "";
-try {
-  configJSON = fs.readFileSync(path.resolve(configPath as string), "utf8");
-} catch (e) { }
-
-if (configJSON) {
-  const config = JSON.parse(configJSON);
-  initReporters(config);
+function jasmineOptionsFilter(argOption: string): boolean {
+  return JASMINE_OPTIONS.some(option => argOption.startsWith(option))
+    || !argOption.startsWith('--');
 }
 
-const commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath as string) >= 0);
+const commandOptions = process.argv
+  .slice(2)
+  .filter(jasmineOptionsFilter)
 
 command.run(jasmine, commandOptions);

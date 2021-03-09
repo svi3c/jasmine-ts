@@ -8,7 +8,7 @@
     "precompile": "rimraf lib",
     "compile": "tsc --project tsconfig.json",
     "lint": "tslint -p tsconfig.json",
-    "jasmineTs": "node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts --transpileOnly --compilerOptions='{\"allowJs\": true}'",
+    "jasmineTs": "node lib/index.js --config=spec/jasmine.json spec/jasmine-ts.spec.ts --transpileOnly --compilerOptions='{\"allowJs\": true}' --fake-option",
     "test": "npm run lint && npm run compile && npm run jasmineTs",
     "prepublishOnly": "npm run compile",
     "release": "standard-version"
