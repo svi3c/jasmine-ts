@@ -62,6 +62,10 @@ if (configJSON) {
   initReporters(config);
 }
 
-const commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath as string) >= 0);
+let commandOptions = process.argv.slice(2).filter((option) => option.indexOf(configPath) >= 0);
+
+process.argv.slice(2).some((option) => option.indexOf("--filter") >= 0)
+    ? commandOptions.push(process.argv.slice(2).filter((option) => option.indexOf("--filter") >= 0).toString())
+    : commandOptions;
 
 command.run(jasmine, commandOptions);
