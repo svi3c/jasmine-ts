@@ -30,9 +30,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ert78gb/jasmine-ts/issues"
+    "url": "https://github.com/svi3c/jasmine-ts/issues"
   },
-  "homepage": "https://github.com/ert78gb/jasmine-ts#readme",
+  "homepage": "https://github.com/svi3c/jasmine-ts#readme",
   "files": [
     "lib"
   ],
