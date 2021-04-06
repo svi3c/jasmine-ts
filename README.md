@@ -1,9 +1,6 @@
 # jasmine-ts
 
-**FYI**: This repo is the fork of the [svi3c/jasmine-ts](https://github.com/svi3c/jasmine-ts).
-Unfortunately, the original repo was not maintained from 2019-07-19 and does not work with the newer version of node.
-
-![CI](https://github.com/ert78gb/jasmine-ts/workflows/Node.js%20CI/badge.svg)
+![CI](https://github.com/svi3c/jasmine-ts/workflows/Node.js%20CI/badge.svg)
 
 A simplification for running [jasmine](https://www.npmjs.com/package/jasmine) with
 [ts-node](https://github.com/TypeStrong/ts-node).
@@ -11,7 +8,7 @@ A simplification for running [jasmine](https://www.npmjs.com/package/jasmine) wi
 ## Installation
 
 ```
-npm i -D @ert78gb/jasmine-ts
+npm i -D jasmine-ts
 ```
 
 ## Usage
