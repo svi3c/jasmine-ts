@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ESNext",
+    "strict": true,
+    "outDir": "lib",
+    "allowJs": true,
+    "checkJs": false,
+  }
+}
