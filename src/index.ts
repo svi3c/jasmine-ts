@@ -115,7 +115,7 @@ const TS_NODE_OPTIONS = [
   "pretty",
   "skipProject",
   "skipIgnore",
-  "preferTsTxts",
+  "preferTsExts",
   "logError"
 ];
 
