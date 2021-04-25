@@ -5,7 +5,7 @@
         "strict": true,
         "sourceMap": true,
         "inlineSources": true,
-        "outDir": "lib"
+        "outDir": "lib",
     },
     "files": [
       "src/index.ts"
