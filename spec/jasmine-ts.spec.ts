@@ -84,6 +84,14 @@ describe("jasmine-ts", () => {
     expect(result.output).toContain('1 spec, 0 failures')
   })
 
+  it('should work with --transpile-only', async () => {
+    const cwd = path.join(__dirname, 'test-cases', 'transpile-only')
+
+    const result = await testJasmine(['--transpile-only', 'index.spec.ts'], cwd);
+    expect(result.exitCode).toBe(0)
+    expect(result.output).toContain('1 spec, 0 failures')
+  })
+
   it('should work with --color', async () => {
     const cwd = path.join(__dirname, 'test-cases', 'simple-ts-file')
 
