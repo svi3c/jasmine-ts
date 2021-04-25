@@ -182,10 +182,6 @@ function testJasmine(args: string[] = [], cwd?: string): Promise<any> {
     })
 
     instance.on('close', code => {
-      console.log({
-        exitCode: code,
-        output: outBuffer.toString()
-      })
       resolve({
         exitCode: code,
         output: outBuffer.toString()

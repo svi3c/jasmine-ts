@@ -186,7 +186,6 @@ const commandOptions = JASMINE_OPTIONS
 
 const files: string[] = [];
 
-console.log('argv._', argv._)
 for (const arg of argv._) {
   if (typeof arg === 'string') {
     if (arg.startsWith('-'))
@@ -197,5 +196,4 @@ for (const arg of argv._) {
     files.push(arg.toString())
 }
 
-console.log({commandOptions, files})
 command.run(jasmine, [...commandOptions, ...files]);
