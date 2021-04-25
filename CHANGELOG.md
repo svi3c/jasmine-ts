@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/svi3c/jasmine-ts/compare/v0.3.2...v0.3.3) (2021-04-25)
+
+
+### Bug Fixes
+
+* reworked the CLI parameter processing ([#61](https://github.com/svi3c/jasmine-ts/issues/61)) ([d6c28bf](https://github.com/svi3c/jasmine-ts/commit/d6c28bfb30ec414fceedb2a513918cd80607b74a))
+
 ### [0.3.2](https://github.com/ert78gb/jasmine-ts/compare/v0.3.1...v0.3.2) (2021-03-09)
 
 
