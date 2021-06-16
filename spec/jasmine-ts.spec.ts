@@ -79,7 +79,7 @@ describe("jasmine-ts", () => {
   it('should work with --compiler-options', async () => {
     const cwd = path.join(__dirname, 'test-cases', 'project')
 
-    const result = await testJasmine(['--compiler-options="{\\"allowJs\\":true, \\"checkJs\\":false}"', 'index.spec.ts'], cwd);
+    const result = await testJasmine(['--compiler-options="{\\"allowJs\\":true, \\"checkJs\\":false, \\"esModuleInterop\\":false}"', 'index.spec.ts'], cwd);
     expect(result.exitCode).toBe(0)
     expect(result.output).toContain('1 spec, 0 failures')
   })
