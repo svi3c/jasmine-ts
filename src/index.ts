@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import * as path from "path";
-import {parse, register} from "ts-node";
+import {register} from "ts-node";
 import yargs from "yargs";
 
 const argv = yargs(process.argv.slice(2))
@@ -122,7 +122,7 @@ const TS_NODE_OPTIONS = [
 const tsNodeOptions = TS_NODE_OPTIONS.reduce((options, option) => {
   if (argv[option]) {
     if (option === "compilerOptions") {
-      options[option] = parse(argv[option] as string)
+      options[option] = JSON.parse(argv[option] as string)
     } else if (option === 'require') {
       if (Array.isArray(argv[option])) {
         options[option] = argv[option]
