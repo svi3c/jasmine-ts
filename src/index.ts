@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import * as path from "path";
 import {parse, register} from "ts-node";
-import * as yargs from "yargs";
+import yargs from "yargs";
 
-const argv = yargs
+const argv = yargs(process.argv.slice(2))
   .scriptName('jasmine-ts')
   .usage('$0 [options]')
   .option('r', {
@@ -99,7 +99,7 @@ const argv = yargs
   .alias('h', 'help')
   .alias('v', 'version')
   .help()
-  .argv;
+  .argv as any;
 
 const TS_NODE_OPTIONS = [
   'require',
