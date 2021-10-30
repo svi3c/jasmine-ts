@@ -2,8 +2,11 @@ name: Node.js CI
 
 on:
   pull_request:
-    types: [opened]
+    branches:
+      - master
   push:
+    branches:
+      - master
 
 jobs:
   test:
