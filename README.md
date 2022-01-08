@@ -25,7 +25,7 @@ npm i -D jasmine-ts
 * Initialize jasmine
 
   ```
-  node_modules/.bin/jasmine-ts init
+  npx jasmine-ts init
   ```
 
 * Run the tests
